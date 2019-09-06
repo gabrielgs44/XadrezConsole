@@ -1,4 +1,4 @@
-﻿namespace tabuleiro
+﻿namespace XadrezConsole.tabuleiro
 {
     enum Cor
     {

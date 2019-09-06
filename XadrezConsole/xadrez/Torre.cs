@@ -1,6 +1,6 @@
-﻿using tabuleiro;
+﻿using XadrezConsole.tabuleiro;
 
-namespace xadrez
+namespace XadrezConsole.xadrez
 {
     class Torre : Peca
     {
@@ -12,7 +12,7 @@ namespace xadrez
         private bool PodeMover(Posicao pos)
         {
             Peca p = Tab.Peca(pos);
-            return p == null || p.Cor != this.Cor;
+            return p == null || p.Cor != Cor;
         }
 
         public override bool[,] MovimentoPossiveis()
@@ -34,7 +34,7 @@ namespace xadrez
             }
 
             // direita
-            pos.DefinirValores(Posicao.Linha, Posicao.Coluna +1);
+            pos.DefinirValores(Posicao.Linha, Posicao.Coluna + 1);
             while (Tab.PosicaoValida(pos) && PodeMover(pos))
             {
                 mat[pos.Linha, pos.Coluna] = true;

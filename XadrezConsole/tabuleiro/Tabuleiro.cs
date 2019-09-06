@@ -1,4 +1,4 @@
-﻿namespace tabuleiro
+﻿namespace XadrezConsole.tabuleiro
 {
     class Tabuleiro
     {
@@ -41,7 +41,7 @@
 
         public Peca RetirarPeca(Posicao pos)
         {
-            if(Peca(pos) == null)
+            if (Peca(pos) == null)
             {
                 return null;
             }

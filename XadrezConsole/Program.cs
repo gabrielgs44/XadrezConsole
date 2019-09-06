@@ -1,6 +1,7 @@
 ﻿using System;
-using xadrez;
-using tabuleiro;
+using XadrezConsole.tabuleiro;
+using XadrezConsole.xadrez;
+
 namespace XadrezConsole
 {
     class Program
@@ -40,6 +41,8 @@ namespace XadrezConsole
                         Console.ReadLine();
                     }
                 }
+                Console.Clear();
+                Tela.ImprimirPartida(partida);
 
             }
             catch (TabuleiroException e)

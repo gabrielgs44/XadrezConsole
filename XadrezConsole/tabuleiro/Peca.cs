@@ -1,4 +1,4 @@
-﻿namespace tabuleiro
+﻿namespace XadrezConsole.tabuleiro
 {
     abstract class Peca
     {
@@ -18,9 +18,9 @@
         public bool ExisteMovimentosPossiveis()
         {
             bool[,] mat = MovimentoPossiveis();
-            for(int i = 0; i < Tab.Linhas; i++)
+            for (int i = 0; i < Tab.Linhas; i++)
             {
-                for(int j = 0; j < Tab.Colunas; j++)
+                for (int j = 0; j < Tab.Colunas; j++)
                 {
                     if (mat[i, j])
                     {
@@ -32,7 +32,7 @@
             return false;
         }
 
-        public bool PodeMoverPara(Posicao pos)
+        public bool MovimentoPossivel(Posicao pos)
         {
             return MovimentoPossiveis()[pos.Linha, pos.Coluna];
         }
@@ -40,6 +40,10 @@
         public void IncrementarQteMovimento()
         {
             QteMovimentos++;
+        }
+        public void DecrementarQteMotivmento()
+        {
+            QteMovimentos--;
         }
 
         public abstract bool[,] MovimentoPossiveis();
